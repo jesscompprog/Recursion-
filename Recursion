@@ -1,0 +1,107 @@
+package javaapplication41;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Jess
+ */
+public class JavaApplication41 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       System.out.println(Factorial_Recursion(23));
+        int a,b,sum = 0;
+        System.out.println("Enter any Number:");
+        Scanner ref= new Scanner(System.in);
+        int n = ref.nextInt();
+        
+        while(n>0)
+        {
+           int r = n%10;
+            sum = sum + r;
+            a = n/10;
+        }
+        System.out.println("Sum of Digits:" +sum);
+        
+
+    }
+
+    static void PrintJamie() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Jess");
+        }
+
+    }
+
+    static void PrintJamie1(int a) {
+        for (int i = 0; i < a; i++) {
+            System.out.println("Jess" + i);
+        }
+    }
+
+    static int Sum(int number1, int number2) {
+        return number1 + number2;
+    }
+
+    static int Power(int base, int exp) {
+        int answer = base;
+        for (int i = 1; i < exp; i++) {
+            answer = answer * base;
+
+            //System.out.println(answer);
+        }
+        return answer;
+    }
+
+    static int sum(int k) {
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
+
+    }
+
+    static int Factorial_Loop(int a) {
+        int facto = 1;
+        for (int i = 0; i < a; i++) {
+            facto = facto + facto * i;
+        }
+
+        return facto;
+
+    }
+
+    static double Factorial_LoopDouble(int a) {
+        double facto = 1;
+        for (int i = 0; i < a; i++) {
+            facto = facto + facto * i;
+        }
+
+        return facto;
+
+    }
+
+    static int Factorial_Recursion(int a) {
+
+        if (a > 0) {
+             return a * Factorial_Recursion(a - 1);
+        } else {                     
+            return 1;
+        } 
+        
+        
+
+    }
+
+    static double SampleKwenta(int a) {
+        System.out.println(Factorial_LoopDouble(a));
+        System.out.println(Power(a, a));
+        double x = (double) Factorial_Recursion(a) / Power(a, a);
+        return x;
+        }
+
+    }
